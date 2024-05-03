@@ -176,6 +176,10 @@ function register() {
     // Check if password matches
     if (localStorage.getItem(loginUsername) === loginPassword) {
         alert("Login successful!");
+        setTimeout(function() {
+            document.getElementById("ac").style.display = "none";
+            document.getElementById("main").style.display = "block";
+        }, 2000);
     } else {
         alert("Incorrect password!");
     }
